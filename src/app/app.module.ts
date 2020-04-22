@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy, Platform } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
 
@@ -19,7 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [MyApp],
   entryComponents: [
