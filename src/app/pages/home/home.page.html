@@ -1,11 +1,7 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title>home</ion-title>
-    </ion-toolbar>
-</ion-header>
-
 <ion-content>
-    <ion-button color="primary">Primary</ion-button>
-    <ion-button color="secondary">Secondary</ion-button>
-    <ion-button color="success">Success</ion-button>
+    <ion-button color="primary" class="custom-button" (click)="set()">{{'homePage.testKey'|translate}}</ion-button>
+    <ion-button color="secondary" class="custom-button" (click)="get()">{{'homePage.testKey1'|translate}}</ion-button>
+    <ion-button color="success" class="custom-button" (click)="remove()">{{'homePage.testKey2'|translate}}</ion-button>
+    <ion-button color="success" class="custom-button" (click)="clear()">{{'homePage.testKey3'|translate}}</ion-button>
+    <ion-button color="success" class="custom-button" (click)="setLangule()">{{'homePage.testKey4'|translate}}</ion-button>
 </ion-content>

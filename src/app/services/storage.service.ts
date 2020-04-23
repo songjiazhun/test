@@ -8,16 +8,21 @@ export class StorageService {
 
   constructor(private storage: Storage) { }
 
-  public setTest(value: boolean) {
-    return this.storage.set("visited", JSON.stringify(value)).then((data) => {
-      console.log('Set first visit', data);
-    });
+  public setTest(value:any) {
+    return this.storage.set("test", JSON.stringify(value));
   }
 
-  public getTest(): Promise<boolean> {
-    return this.storage.get("visited").then((data) => {
-      console.log('Already visited', data);
-      return JSON.parse(data);
-    });
+  public getTest(){
+     return this.storage.get("test");
+
+  }
+
+  public clear(){
+      return this.storage.clear();
+  }
+
+  public remove(key:string){
+    let tkey = key || "test";
+    return this.storage.remove(tkey);
   }
 }
